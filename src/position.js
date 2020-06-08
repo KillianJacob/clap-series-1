@@ -12,6 +12,13 @@ const SOLAR_SYSTEM =
 
 function position(planet) {
   // CODE HERE
+  
+  return SOLAR_SYSTEM.indexOf(capitalizeFirstLetter(planet.toLowerCase()));
+  
+}
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 export { position };

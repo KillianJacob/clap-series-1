@@ -10,7 +10,50 @@
  * On considère que la valeur de la carte prime sur le type de la carte
  */
 function orderCards(cards) {
-  // CODE HERE
+
+	var arrValue = {};
+	
+	var TypeValue = {
+		'2': 2,
+		'3': 3,
+		'4': 4,
+		'5': 5,
+		'6': 6,
+		'7': 7,
+		'8': 8,
+		'9': 9,
+		'10': 10,
+		'J': 11,
+		'Q': 12,
+		'K': 13,
+		'A': 14,		
+	};
+  
+	var temp_arr = [];
+  
+	for (let i = 0; i < cards.length; i++) {
+	
+		var c = cards[i];
+	
+		if(c.length == 3){
+		
+			type = c.charAt();
+		
+		}
+		else{
+		
+			type = c.charAt(1);
+			
+		}
+	
+		for (let a = 0; a < cards.length; a++) {
+	
+			
+	
+		}		
+	
+	}
+
 }
 
 export { orderCards };

@@ -7,6 +7,19 @@
  */
 function inArray(ary, val) {
   // CODE HERE
+    
+  for (let i = 0; i < ary.length; i++) {
+	  
+	  if(ary[i] == val){
+		  
+		  return true;
+		  
+	  }
+	  
+  }
+  
+  return false;
+  
 }
 
 export { inArray };

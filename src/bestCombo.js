@@ -18,8 +18,43 @@
  * 
  */
 
+//let cards = ["7h", "8d", "7d", "7s", "8s", "3s", "3h"];
+	
+//bestCombo(cards);
+ 
 function bestCombo(cards) {
   // CODE HERE
+  
+	//check full
+  
+	var arrValue = {};
+  
+	for (let i = 0; i < cards.length; i++) {
+		
+		var card = cards[i];
+		
+		var value = card.charAt(0);
+		
+		if(isNaN(arrValue[value])){
+			
+			arrValue[value] = 0;
+			
+		}
+		
+		arrValue[value] = arrValue[value] + 1;
+		
+	}
+	
+	for (let i = 0; i < arrValue.length; i++) {	
+	
+		
+	
+	}
+	
+	//console.log(arrValue);
+  
+  
 }
+
 
 export { bestCombo };

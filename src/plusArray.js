@@ -7,6 +7,22 @@
  */
 function plusArray(arr1, arr2) {
   // CODE HERE
+  
+  var total = 0;
+  
+  for (let i = 0; i < arr1.length; i++) {
+	  
+	 total = total + arr1[i];
+	  
+  }
+ 
+   for (let i = 0; i < arr2.length; i++) {
+	  
+	 total = total + arr2[i];
+	  
+  }
+  
+  return total;
 }
 
 export { plusArray };

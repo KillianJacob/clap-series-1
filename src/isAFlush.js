@@ -12,6 +12,54 @@
 
 function isAFlush(cards) {
   // CODE HERE
+  
+	var res = false;
+  
+	var arrType = {};
+  
+	for (let i = 0; i < cards.length; i++) {
+		
+		var card = cards[i];
+		
+		var type = null;
+		
+		if(card.length == 3){
+		
+			type = card.charAt(2);
+		
+		}
+		else{
+		
+			type = card.charAt(1);
+			
+		}
+		
+		if(isNaN(arrType[type])){
+			
+			arrType[type] = 0;
+			
+		}
+		
+		arrType[type] = arrType[type] + 1;
+		
+	}
+	
+	for (var key in arrType) {
+	
+		if(arrType[key] == 5){
+			
+			res = true;
+			
+		}
+	
+	}
+
+
+
+	
+	return res;
+	
+  
 }
 
 export { isAFlush };

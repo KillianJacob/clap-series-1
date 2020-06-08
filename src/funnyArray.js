@@ -11,7 +11,29 @@
  * - Si le tableau est vide, je retourne le mot 'rien'
  */
 function funnyArray(ary) {
-  // CODE HERE
+	
+	if(ary.length == 0){
+		
+		return "rien";
+		
+	}
+	else if(ary.length % 2 != 0){
+		
+		var indexOfMiddle = ((ary.length - 1)/2);
+		
+		return ary[indexOfMiddle];
+	
+	}
+	else if(ary.length % 2 == 0){
+		
+		var indexMiddle1 = (ary.length/2)-1;
+		var indexMiddle2 = (ary.length/2);
+		
+		return ary[indexMiddle1] + ary[indexMiddle2];
+		
+	}
+	
+	
 }
 
 export { funnyArray };
