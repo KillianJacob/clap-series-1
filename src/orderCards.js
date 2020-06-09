@@ -28,31 +28,74 @@ function orderCards(cards) {
 		'K': 13,
 		'A': 14,		
 	};
+	
+	var symbole = {
+		'd' : 4,
+		'c' : 3,
+		'h' : 2,
+		's' : 1,	
+	}
   
 	var temp_arr = [];
   
 	for (let i = 0; i < cards.length; i++) {
 	
-		var c = cards[i];
 	
-		if(c.length == 3){
+		for (let a = i; a < cards.length; a++) {
+	
+			var c = cards[i];
+	
+			var value = null;
 		
-			type = c.charAt();
+			var type = null;
 		
-		}
-		else{
+			if(c.length == 3){
 		
-			type = c.charAt(1);
+				value = c.substring(0, 1);
+				type = c.charAt(2);
 			
+		
+			}
+			else{
+		
+				value = c.charAt(0);
+				type = c.charAt(1);
+				
+			}
+
+			var c2 = cards[a];
+	
+			var value2 = null;
+			var type2 = null;
+	
+			if(c2.length == 3){
+		
+				value2 = c2.substring(0, 1);
+				type2 = c2.charAt(2);
+			}
+			else{
+		
+				value2 = c2.charAt(0);
+				type2 = c2.charAt(1)
+			}			
+	
+	
+			if(TypeValue[value2] > TypeValue[value] || ( TypeValue[value2] >= TypeValue[value] && symbole[type] >= symbole[type2] ) ){
+				
+				var tempValue = c;
+				
+				cards[i] = cards[a];
+				cards[a] = tempValue;
+				
+			}
+	
 		}
 	
-		for (let a = 0; a < cards.length; a++) {
-	
-			
-	
-		}		
+		
 	
 	}
+
+	return cards;
 
 }
 

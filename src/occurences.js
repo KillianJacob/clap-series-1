@@ -28,7 +28,44 @@ const CARDS = {
 }
 
 function occurences(cards) {
-  // CODE HERE
+  
+  	var arrValue = {};
+  
+	for (let i = 0; i < cards.length; i++) {
+		
+		var card = cards[i];
+		
+		var value = keyOf(card.charAt(0));
+		
+		if(isNaN(arrValue[value])){
+			
+			arrValue[value] = 0;
+			
+		}
+		
+		arrValue[value] = arrValue[value] + 1;
+		
+	}
+
+	return arrValue;
+}
+
+function keyOf(value){
+	
+	var res = null;
+	
+	for (var key in CARDS) {
+	
+		if(CARDS[key] == value){
+			
+			res = key;
+			
+		}
+	
+	}
+	
+	return res;
+	
 }
 
 export { occurences };
